@@ -3,7 +3,10 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-resource "aws_s3_bucket" "tf_course" {
+resource "aws_s3_bucket_acl" "prod_tf_course" {
   bucket = "tf-course-october-2022"
-  acl    = "private"
+}
+
+resource "aws_default_vpc" "default" {
+  
 }
